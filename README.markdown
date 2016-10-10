@@ -20,8 +20,11 @@ and several others, plus mappings to help alleviate the `set paste` dance.
 Consult the documentation.
 
 There are mappings for encoding and decoding. `[x` and `]x` encode and
-decode XML (and HTML). `[u` and `]u` encode and decode URLs. `[y` and
+decode XML (and HTML). `[U` and `]U` encode and decode URLs. `[y` and
 `]y` do C String style escaping.
+
+There are mappings to jump through the chronological undo stack: `[u` and
+`]u`, which takes you backward and forward, respectively.
 
 And in the miscellaneous category, there's `[f` and `]f` to go to the
 next/previous file in the directory, and `[n` and `]n` to jump between

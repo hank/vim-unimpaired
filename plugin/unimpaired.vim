@@ -109,6 +109,16 @@ nnoremap <silent> <Plug>unimpairedContextNext     :call <SID>Context(0)<CR>
 onoremap <silent> <Plug>unimpairedContextPrevious :call <SID>ContextMotion(1)<CR>
 onoremap <silent> <Plug>unimpairedContextNext     :call <SID>ContextMotion(0)<CR>
 
+nmap [u <Plug>unimpairedUndoPrevious
+nmap ]u <Plug>unimpairedUndoNext
+omap [u <Plug>unimpairedUndoPrevious
+omap ]u <Plug>unimpairedUndoNext
+
+nnoremap <silent> <Plug>unimpairedUndoPrevious :earlier<CR>
+nnoremap <silent> <Plug>unimpairedUndoNext     :later<CR>
+onoremap <silent> <Plug>unimpairedUndoPrevious :earlier<CR>
+onoremap <silent> <Plug>unimpairedUndoNext     :later<CR>
+
 function! s:Context(reverse)
   call search('^\(@@ .* @@\|[<=>|]\{7}[<=>|]\@!\)', a:reverse ? 'bW' : 'W')
 endfunction
@@ -455,8 +465,8 @@ endfunction
 
 call UnimpairedMapTransform('string_encode','[y')
 call UnimpairedMapTransform('string_decode',']y')
-call UnimpairedMapTransform('url_encode','[u')
-call UnimpairedMapTransform('url_decode',']u')
+call UnimpairedMapTransform('url_encode','[U')
+call UnimpairedMapTransform('url_decode',']U')
 call UnimpairedMapTransform('xml_encode','[x')
 call UnimpairedMapTransform('xml_decode',']x')
 
